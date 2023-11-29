@@ -1,0 +1,23 @@
+---
+title: "How to use this package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use this package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+# How to use the package
+
+Intrested in the rxy package
+```{r setup}
+library(ryx)
+```
+
+How to use the package

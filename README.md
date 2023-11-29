@@ -1,6 +1,8 @@
 # ryx
 
-ryx helps you quickly analyze and display correlations between your dependent and independent variables within your dataset.
+<img src="analysis.png" width="700"/>
+
+### ryx helps you quickly analyze and display correlations between your dependent and independent variables within your dataset.
 
 ## Installation
 

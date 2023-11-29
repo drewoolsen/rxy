@@ -15,9 +15,53 @@ knitr::opts_chunk$set(
 ```
 # How to use the package
 
-Intrested in the rxy package
+So you're intrested in the rxy package, but don't know how to. Luckily for you, this article is here to help!
+
+First off, make sure package is installed (I know you have most likely already done this but it never hurts to b thorough).
 ```{r setup}
 library(ryx)
 ```
 
-How to use the package
+Great! The package is installed (hopefully).
+
+
+
+Next, you should create an ryx object. This is done via the ryx function!
+
+The ryx function needs a dataframe and a dependent variable (y) to test against all the independent variables (x). You can define which specific variables to test y against, however if no value is set for x, the function will just use every non-y variable in your dataframe.
+
+```{r}
+data(mtcars)
+
+#passing a list of x variables
+x <- ryx(mtcars, y = "mpg", x = c("hp", "wt", "disp", "cyl", "am", "gear"))
+
+
+#leaving x blank. x will contain every variable except "mpg"
+x <- ryx(mtcars, y = "mpg")
+```
+
+
+## Analyzing the results
+
+Now that you have an ryx object, you can use the remaining functions in the package to analyze the results!
+
+You have three different options depending on what you want. You can display the results as a table
+```{r}
+print(x)
+```
+
+In text format
+```{r}
+summary(x)
+```
+
+Or visually
+```{r}
+plot(x)
+```
+
+Congrats! You have now discovered the ryx package. If you have any issues, my email is doolsen@wes.edu. 
+
+Enjoy!
+Drew
